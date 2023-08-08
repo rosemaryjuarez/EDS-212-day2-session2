@@ -21,3 +21,19 @@ fxyz = expression(2 * x + y +3 * (x ^ 2) * (z ^ 3))
 dfdy = D(fxyz, 'y')
 dfdy
 ```
+
+# Penguins Plot
+
+create geom_points ,body mass on x, flipper on y
+
+```{r}
+ggplot(data = penguins, 
+       aes(x = body_mass_g, 
+           y = flipper_length_mm
+           )) +
+  geom_point(color = 'purple')+
+  labs(x = 'Body Mass(g)', 
+       y = 'Flipper Length(mm)') +
+  labs(title = 'Palmer Penguins Body Dimensions')+
+  theme_linedraw()
+```
